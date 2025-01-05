@@ -28,7 +28,7 @@ import static java.time.LocalDateTime.now;
 
 import java.sql.SQLException;
 
-import org.h2.tools.Console;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
@@ -86,8 +86,7 @@ public class HibernateIllustrationTest extends TestCase {
 			session.createSelectionQuery("from Event", Event.class).getResultList()
 					.forEach(event -> out.println("Event (" + event.getDate() + ") : " + event.getTitle()));
 		});
-		//++ Para ver realmente el contenido de la Base de datos en memoria en depuración
-		Console.main();
+		
 
 	}
 	
